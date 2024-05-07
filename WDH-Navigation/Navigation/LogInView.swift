@@ -21,11 +21,14 @@ struct LogInView: View {
                 Text("LogIn")
             })
             
+            //FullScreenCover: Screen wird von der neuen View bedeckt
+            .fullScreenCover(isPresented: $viewModel.isLoggedIn, content: {
+                HomeScreen(viewModel: viewModel)
+            })
+            
         }
         
-        .fullScreenCover(isPresented: $viewModel.isLogginIn, content: {
-            HomeScreen(viewModel: viewModel)
-        })
+        
         
         
     }

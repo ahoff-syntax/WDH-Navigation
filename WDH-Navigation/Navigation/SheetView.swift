@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct SheetView: View {
+    
     @ObservedObject var viewModel: NavigationViewModel
+    
     var body: some View {
         
-        Button(action: viewModel.logOut, label: {
+        Button(action: {viewModel.logOut()}, label: {
             Text("Logout")
         })
         

@@ -12,8 +12,13 @@ struct DetailScreen: View {
     @ObservedObject var viewModel: NavigationViewModel
     
     var body: some View {
-        Text("Username: \(viewModel.currentUser.name)")
-        Text("Alter: \(viewModel.currentUser.age)")
+        
+        NavigationStack {
+            VStack {
+                Text("Username: \(viewModel.currentUser.name)")
+                Text("Alter: \(viewModel.currentUser.age)")
+            }
+        }
     }
 }
 

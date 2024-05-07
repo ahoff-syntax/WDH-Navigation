@@ -8,6 +8,7 @@
 import Foundation
 
 class TabBarViewModel: ObservableObject {
+    
     @Published var counter: Int = 0
     @Published var badge: Bool = false
     @Published var letters: [String] = ["a", "b", "c"]

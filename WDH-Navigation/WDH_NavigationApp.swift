@@ -5,18 +5,6 @@
 //  Created by Anna Hoff on 02.05.24.
 //
 
-//TabView, Icons, Badges
-//TabView mit mehr als 5 Items
-//PageStyle
-//.page
-
-//NavigationBar
-//Navigation Stack
-//NavigationLink
-//Sheets
-//onAppear
-//onDissapear
-//showFullScreen
 
 
 

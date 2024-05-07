@@ -11,22 +11,23 @@ class NavigationViewModel: ObservableObject {
     
     private let password = "123456"
     private let userName = "user123"
-    @Published var isLogginIn: Bool = false
+    
     @Published var inputUser: String = ""
     @Published var inputPassword: String = ""
-    @Published var showSheet: Bool = false
+    @Published var isLoggedIn: Bool = false
     @Published var currentUser: User = User(name: "", age: 0)
+    @Published var showSheet: Bool = false
+    
     
     @Published var users: [User] = [User(name: "user123", age: 50), User(name: "asdf", age: 25), User(name: "qwertz", age: 30)]
     
     func checkLogin() {
-        isLogginIn =  inputUser.lowercased() == userName && inputPassword == self.password
+        isLoggedIn = inputUser.lowercased() == userName && inputPassword == password
     }
     
     func logOut() {
+        isLoggedIn.toggle()
         resetInput()
-        isLogginIn = false
-        showSheet.toggle()
     }
     
     func toggleShowSheet() {
